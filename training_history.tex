@@ -516,22 +516,22 @@ distributional filters cannot see structure.
 \label{sec:related}
 
 The maintenance question has a continual-pretraining literature whose instrument is the
-replay fraction. \cite{ibrahim2024} show that learning-rate re-warming, re-decaying, and
+replay fraction. Ibrahim et al.\ \cite{ibrahim2024} show that learning-rate re-warming, re-decaying, and
 replay of previous data together match full retraining from scratch when continually
 pretraining large models; the replay percentages they carry forward are chosen for a
-favourable loss--compute tradeoff, not measured as thresholds. \cite{bethune2025} measure
+favourable loss--compute tradeoff, not measured as thresholds. Bethune et al.\ \cite{bethune2025} measure
 forgetting during finetuning and find that injecting as little as 1\% of pretraining data
 shields the model from forgetting the pretraining set. Both results price the fraction of
 old data; neither varies its placement at a fixed budget. The gap law of
 Section~\ref{sec:geometry} is that missing measurement on this platform: at matched rate
 and totals, the maximum unsupervised gap is the controlling statistic. On the read/use
-split, \cite{zheng2025} argue from task sequences that performance drops in continual
+split, Zheng et al.\ \cite{zheng2025} argue from task sequences that performance drops in continual
 learning often reflect a decline in task alignment rather than true knowledge loss; the
 recap-vs-query dissociation here is the same distinction with the storage side pinned at
 1.000, and Part I builds the supply economics on top of it.
 
 Plasticity loss \cite{dohare2023, lyle2023} names the degradation of the ability to learn
-new things under continued training. \cite{dong2026} locate a formation deadline on
+new things under continued training. Dong \cite{dong2026} locates a formation deadline on
 Pythia-family models: the delay to learn a withheld capability grows with waiting until,
 past a critical step, it never ignites, while validation loss falls smoothly throughout,
 and re-initialising the query--key attention slices restores learnability. That result
@@ -553,7 +553,7 @@ unchanged have no lasting effect \cite{achille2019}; the harmful arm here preser
 statistics and destroys sequential structure, so the vision rule does not transfer to this
 setting. In language models, delayed second-language exposure produces no critical-period
 effect \cite{constantinescu2024}; that manipulation varies when data arrives, not what its
-structure is, and the two findings are compatible. On the artifact, \cite{porian2024} show
+structure is, and the two findings are compatible. On the artifact, Porian et al.\ \cite{porian2024} show
 that a constant-length warmup default is too long for small models and inflates estimated
 optimal token counts, enough to account for part of the disagreement between published
 scaling laws; Section~\ref{sec:artifact} prices the same class of default for a single run,
